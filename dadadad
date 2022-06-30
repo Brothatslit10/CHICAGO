@@ -1,1 +1,194 @@
-adadadadadadw
+-- its not synapse x library, lol
+
+local windows = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Synapse-Library-OBFUSCATED-/main/Source.lua"))()
+local win = windows:Create({
+    Title = "MOON",
+    Game = "Chicago Remastered!"
+})
+
+local tab = win:NewTab({
+    Title = "Player"
+})
+
+
+
+tab:Slider({
+    Title = "Walkspeed",
+    MinValue = 16,
+    Def = 0,
+    MaxValue = 100,
+    callback = function(args)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (args)
+    end
+})
+
+
+tab:Slider({
+    Title = "Jump Power",
+    MinValue = 16,
+    Def = 0,
+    MaxValue = 100,
+    callback = function(args)
+        game.Players.LocalPlayer.Character.Humanoid.JumpHeight = (args)
+    end
+})
+
+
+tab:Slider({
+    Title = "HipHeight",
+    MinValue = 2,
+    Def = 0,
+    MaxValue = 100,
+    callback = function(args)
+        game.Players.LocalPlayer.Character.Humanoid.HipHeight = (args)
+    end
+})
+local tab = win:NewTab({
+    Title = "Teleports"
+})
+tab:Button({
+    Title = "Goto Bank Doors",
+    Callback = function()
+      game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(-246, 5, 94)}):Play()
+    end
+})
+
+
+tab:Button({
+    Title = "Goto Bank Vault",
+    Callback = function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(-220, -6, 117)}):Play()
+    end
+})
+
+tab:Button({
+    Title = "Goto Jewelry Store",
+    Callback = function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(603, 3, -201)}):Play()
+    end
+})
+
+
+
+
+
+tab:Label({
+    Title = "Store Teleports"
+})
+
+
+
+
+
+
+tab:Button({
+    Title = "Goto Gun Store",
+    Callback = function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(117, 3, 47)}):Play()
+    end
+})
+
+tab:Button({
+    Title = "Goto Blox-N-Out",
+    Callback = function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(588, 4, -75)}):Play()
+    end
+})
+
+tab:Button({
+    Title = "Goto The Pitch",
+    Callback = function()
+         game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(709, 3, -96)}):Play()
+    end
+})
+
+tab:Button({
+    Title = "Goto Bike Shop",
+    Callback = function()
+       game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(743, 3, -208)}):Play()
+    end
+})
+
+
+local tab = win:NewTab({
+    Title = "AutoFarm"
+})
+
+tab:Toggle({
+    Title = "Enable AutoFarms",
+    Description = "Locks On To The Nearest Player To Your Camera.",
+    Callback = function(Value)
+  getgenv().AutoFarmGlobal = (Value)
+	while AutoFarmGlobal do
+		game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(-81, 6, 65)}):Play();
+		wait(1)
+ 
+		fireclickdetector(game:GetService("Workspace").Map.Jobs.Bodega.Pickup.Boxes.ClickDetector, 10)
+ 
+		wait(0.5)
+ 
+		game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(-76, 13, 56)}):Play();
+ 
+		fireclickdetector(game:GetService("Workspace").Map.Jobs.Bodega.DropOff.Supply.ClickDetector, 10)
+ 
+		wait(2)
+ 
+		-------
+		game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(-250, 13, -43)}):Play();
+		wait(0.5)
+ 
+		fireclickdetector(game:GetService("Workspace").Map.Jobs.Bartender.BottleGroup.ClickDetector, 10)
+		wait(5)
+		-------
+ 
+		game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(600, 4, -96)}):Play();
+ 
+		wait(1)
+ 
+		fireproximityprompt(game:GetService("Workspace").Map.Jobs.InAndOut.FrieWork.ProximityAttachment.ProximityPrompt, 1, true)
+ 
+		wait(5)
+ 
+		game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(590, 4, -86)}):Play();
+ 
+		wait(1)
+		end
+    end
+})
+
+
+tab:Toggle({
+    Title = "Enable AutoFarm (Bodega)",
+    Description = "Teleports You To AutoFarm (Bodega)",
+    Callback = function(args)
+  getgenv().AutoBodega = (args)
+	while AutoBodega do	
+		game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(-81, 6, 65)}):Play();
+		wait(1)
+ 
+		fireclickdetector(game:GetService("Workspace").Map.Jobs.Bodega.Pickup.Boxes.ClickDetector, 10)
+ 
+		wait(0.5)
+ 
+		game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = CFrame.new(-76, 13, 56)}):Play();
+ 
+		fireclickdetector(game:GetService("Workspace").Map.Jobs.Bodega.DropOff.Supply.ClickDetector, 10)
+ 
+		wait(1)
+		end
+    end
+})
+
+local tab = win:NewTab({
+    Title = "Aimbot"
+})
+
+tab:Button({
+    Title = "RBlissful4992 Aimbot",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/Miscellaneous/main/UNIVERSAL.lua"))()
+    end
+})
+local tab = win:NewTab({
+    Title = "Misc."
+})
