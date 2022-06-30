@@ -1,5 +1,4 @@
--- its not synapse x library, lol
-
+-- OPEN SOURCE FOR MY KIDS
 local windows = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Synapse-Library-OBFUSCATED-/main/Source.lua"))()
 local win = windows:Create({
     Title = "MOON",
